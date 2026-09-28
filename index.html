@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>극지 운항 예지정비 육상 관제 — 시연</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root{ --brand:#0e2f5c; --brand-2:#164a8a; --canvas:#eef1f6; --panel:#fff;
+         --text:#24292e; --text-2:rgba(36,41,46,.72); --text-3:rgba(36,41,46,.66); --line:rgba(36,41,46,.14); }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--canvas);color:var(--text);font-family:"Pretendard","Malgun Gothic",sans-serif}
+  header{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;padding:22px 28px}
+  header h1{margin:0;font-size:20px;font-weight:700}
+  header p{margin:6px 0 0;font-size:13px;color:rgba(255,255,255,.8)}
+  main{max-width:880px;margin:0 auto;padding:24px 20px 40px;display:grid;gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:18px 20px;
+        box-shadow:0 1px 2px rgba(36,41,46,.08);text-decoration:none;color:inherit;display:block}
+  .card:hover{border-color:var(--brand-2)}
+  .card .v{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--brand-2);
+           border-radius:2px;padding:2px 8px;margin-bottom:8px}
+  .card h2{margin:0 0 6px;font-size:17px}
+  .card p{margin:0;font-size:13.5px;color:var(--text-2);line-height:1.6}
+  .card ul{margin:10px 0 0;padding-left:18px;font-size:12.5px;color:var(--text-3);line-height:1.7}
+  .note{font-size:12px;color:var(--text-3);line-height:1.7;margin:4px 2px 0}
+</style>
+</head>
+<body>
+  <header>
+    <h1>극지 운항 선박 예지정비 · 육상 관제</h1>
+    <p>주식회사 케이디에스 · 정부 R&amp;D S3473402 · 1차년도 UI/UX 시연본</p>
+  </header>
+  <main>
+    <a class="card" href="./v3/">
+      <span class="v">v3</span>
+      <h2>모니터링 (현재 개발본)</h2>
+      <p>지도를 중심에 둔 관제 화면. 보이는 값을 최소로 줄이고, 판정에 필요한 것만 남겼습니다.</p>
+      <ul>
+        <li>선단 위치 — 2D 지도 · 24시간 항적 · 드래그 이동 · 휠 확대</li>
+        <li>잔여수명 — 2계층 계산(설계수명 − 등가 운행량 + 실측 보정) · 4단계 경보 · 책임자 확인</li>
+        <li>정비 권고 — 조치 · 기한 · 추천 기항(결빙 폐쇄 · 입거 · 정박 시간 판정)</li>
+        <li>장비 BOM — 부품 마스터 수정 · 검증 · 정비 이력(교체 시 잠금 해제)</li>
+      </ul>
+    </a>
+    <a class="card" href="./v2/">
+      <span class="v">v2</span>
+      <h2>초기 프로토타입 (비교용)</h2>
+      <p>8개 화면을 모두 갖춘 이전 버전. 사이드바 아래에서 핵심(v2) · 전체(v1) 화면을 바꿔 볼 수 있습니다.</p>
+      <ul>
+        <li>선단 관제 · 데이터 품질 · 리포트 · 알람 센터</li>
+        <li>잔여수명 현황 · 레퍼런스 커브 진단 · 정비 계획 · 장비 이력</li>
+      </ul>
+    </a>
+    <p class="note">
+      두 화면 모두 <b>목(mock) 데이터</b>로 동작하는 시연본입니다. 선박 위치는 정의서에 위경도 채널이 없어 가정값이며,
+      부품·설계수명·기항 일정·경보 임계도 실제 자료를 받기 전의 가정값입니다.
+    </p>
+  </main>
+</body>
+</html>
